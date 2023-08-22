@@ -3,7 +3,8 @@
     public partial class MainPage : ContentPage
     {
         int count = 0;
-        int anothercount=0;
+        string user = "admin";
+        string pass = "123";
         public MainPage()
         {
             InitializeComponent();
@@ -11,15 +12,20 @@
 
         private void Login_Clicked(object sender, EventArgs e)
         {
-            count+=1000;
-
-            if (count == 1)
-                LoginBtn.Text = $"Clicked {count} time";
+            if (user.ToLower().CompareTo(inputUsername.Text) == 0 && pass.ToLower().CompareTo(inputPassword.Text)==0)
+            {
+                sysMessage.Text = "Login Success";
+            }else if(String.IsNullOrEmpty(inputUsername.Text)){
+                sysMessage.Text = "Field is empty";
+            }
             else
-                LoginBtn.Text = $"Clicked {count} times";
+            {
+                sysMessage.Text = "Login Failed";
+            }
 
-            SemanticScreenReader.Announce(LoginBtn.Text);
+            
         }
+
 
 
     }

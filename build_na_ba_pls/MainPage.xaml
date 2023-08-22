@@ -5,32 +5,43 @@
 
     <ScrollView>
         <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
+            Spacing="12"
+            Padding="400,10"
             VerticalOptions="Center">
 
             <Label
                 Text="Username"
-                HorizontalOptions="Center"
                 />
-            
-            
-            <Entry Placeholder="" 
-                   />
-            
+
+
+            <Entry Placeholder="Username"
+                x:Name="inputUsername"
+                MaxLength="64"
+                MaximumWidthRequest="400"
+                />
+
             <Label
                 Text="Password"
-                HorizontalOptions="Center"
+          
                 />
 
             <Entry Placeholder="" 
-                    />
+                 x:Name="inputPassword"
+                 MaxLength="64"
+                 VerticalOptions="Center"
+            MaximumWidthRequest="400"
+                />
 
             <Button
-                x:Name="LoginBtn"
                 Text="Login"
                 Clicked="Login_Clicked"
-                HorizontalOptions="Center" />
+                />
+
+            <Label
+                x:Name="sysMessage"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                />
 
 
 
