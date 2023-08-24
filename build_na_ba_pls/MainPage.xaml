@@ -6,35 +6,50 @@
     <ScrollView>
         <VerticalStackLayout
             Spacing="12"
-            Padding="400,10"
+            Padding="400,400,200,400"
             VerticalOptions="Center">
 
             <Label
-                Text="Username"
-                />
+            Text="Username"
+            />
 
-
-            <Entry Placeholder="Username"
-                x:Name="inputUsername"
-                MaxLength="64"
-                MaximumWidthRequest="400"
-                />
+        <Border Stroke="#000000"
+        StrokeThickness="1"
+        StrokeShape="Rectangle 40,0,0,40"
+        Background="#FFFFFF"
+        Padding="-5">
+                <Entry Placeholder="Username"
+            x:Name="inputUsername"
+            MaxLength="64
+            MaximumWidthRequest="400"
+            VerticalOptions="Center"
+            />
+        </Border>
 
             <Label
                 Text="Password"
           
                 />
 
-            <Entry Placeholder="" 
-                 x:Name="inputPassword"
-                 MaxLength="64"
-                 VerticalOptions="Center"
+            <Border Stroke="#000000"
+            StrokeThickness="1"
+            StrokeShape="Rectangle 40,0,0,40"
+            Background="#FFFFFF"
+            Padding="-5">
+                <Entry Placeholder="Password"
+            x:Name="inputPassword"
+            MaxLength="64"
             MaximumWidthRequest="400"
-                />
+            VerticalOptions="Center"
+            IsPassword="True"
+                    />
+            </Border>
 
             <Button
                 Text="Login"
+                FontSize="Small"
                 Clicked="Login_Clicked"
+                BackgroundColor="#008fff"
                 />
 
             <Label

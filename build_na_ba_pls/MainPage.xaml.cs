@@ -16,11 +16,11 @@
             {
                 sysMessage.Text = "Login Success";
             }else if(String.IsNullOrEmpty(inputUsername.Text)){
-                sysMessage.Text = "Field is empty";
+                sysMessage.Text = "“Username and/or Password should not be empty. Please try again.”";
             }
             else
             {
-                sysMessage.Text = "Login Failed";
+                sysMessage.Text = "Username and/or Password is incorrect. Please try again";
             }
 
             
