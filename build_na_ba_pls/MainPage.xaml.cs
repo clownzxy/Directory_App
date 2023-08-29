@@ -8,6 +8,8 @@
         public MainPage()
         {
             InitializeComponent();
+
+            StackLayoutMain.IsVisible = true;
         }
 
         private void Login_Clicked(object sender, EventArgs e)
