@@ -2,13 +2,20 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
         string user = "admin";
         string pass = "123";
         public MainPage()
         {
             InitializeComponent();
+
         }
+
+        private void OnSettingsButtonClicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage.Navigation.PushModalAsync(new Register(), true);
+        }
+
+
 
         private void Login_Clicked(object sender, EventArgs e)
         {

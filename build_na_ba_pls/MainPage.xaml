@@ -4,43 +4,54 @@
              x:Class="build_na_ba_pls.MainPage">
 
     <ScrollView>
-        <VerticalStackLayout
+        <StackLayout
+            x:Name="StackLayoutMain"
             Spacing="12"
-            Padding="400,400,200,400"
+            Padding="200,200,200,200"
             VerticalOptions="Center">
 
             <Label
-            Text="Username"
-            />
+        Text="Username"
+        Margin="0,-11"
+        />
 
-        <Border Stroke="#000000"
+            <Border Stroke="#000000"
         StrokeThickness="1"
         StrokeShape="Rectangle 40,0,0,40"
         Background="#FFFFFF"
-        Padding="-5">
+        
+                >
                 <Entry Placeholder="Username"
-            x:Name="inputUsername"
-            MaxLength="64"
-            MaximumWidthRequest="400"
-            VerticalOptions="Center"
-            />
-        </Border>
+                x:Name="inputUsername"
+                MaxLength="32"
+                Margin="5"
+                MinimumWidthRequest="500"
+       
+                VerticalOptions="Center"
+
+            
+            
+            
+            ></Entry>
+            </Border>
 
             <Label
                 Text="Password"
-          
+                Margin="0,-11"
                 />
 
             <Border Stroke="#000000"
             StrokeThickness="1"
             StrokeShape="Rectangle 40,0,0,40"
             Background="#FFFFFF"
-            Padding="-5">
+ MinimumWidthRequest="500">
+
                 <Entry Placeholder="Password"
             x:Name="inputPassword"
             MaxLength="64"
-            MaximumWidthRequest="400"
             VerticalOptions="Center"
+            Margin="5"
+            MinimumWidthRequest="500"          
             IsPassword="True"
                     />
             </Border>
@@ -50,6 +61,7 @@
                 FontSize="Small"
                 Clicked="Login_Clicked"
                 BackgroundColor="#008fff"
+                MinimumWidthRequest="500" 
                 />
 
             <Label
@@ -60,9 +72,13 @@
 
 
 
+            <Button
+                x:Name="NewPageButton"
+                Clicked="OnSettingsButtonClicked" Text="Go to next page!">
+                
+            </Button> 
 
-
-        </VerticalStackLayout>
+        </StackLayout>
     </ScrollView>
 
 </ContentPage>
