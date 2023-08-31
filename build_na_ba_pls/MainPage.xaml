@@ -13,70 +13,64 @@
             <Label
         Text="Username"
         Margin="0,-11"
-        />
+            />
 
             <Border Stroke="#000000"
         StrokeThickness="1"
         StrokeShape="Rectangle 40,0,0,40"
         Background="#FFFFFF"
-        
-                >
+            >
                 <Entry Placeholder="Username"
                 x:Name="inputUsername"
                 MaxLength="32"
                 Margin="5"
                 MinimumWidthRequest="500"
-       
-                VerticalOptions="Center"
-
-            
-            
-            
-            ></Entry>
+                TextColor="Black"
+                VerticalOptions="Center">
+                </Entry>
             </Border>
 
-            <Label
-                Text="Password"
-                Margin="0,-11"
-                />
+        <Label
+            Text="Password"
+            Margin="0,-11"
+        />
 
-            <Border Stroke="#000000"
-            StrokeThickness="1"
-            StrokeShape="Rectangle 40,0,0,40"
-            Background="#FFFFFF"
- MinimumWidthRequest="500">
+        <Border Stroke="#000000"
+        StrokeThickness="1"
+        StrokeShape="Rectangle 40,0,0,40"
+        Background="#FFFFFF"
+        MinimumWidthRequest="500"
+        >
 
-                <Entry Placeholder="Password"
-            x:Name="inputPassword"
-            MaxLength="64"
+            <Entry Placeholder="Password"
+        x:Name="inputPassword"
+        MaxLength="64"
+        VerticalOptions="Center"
+        Margin="5"
+        MinimumWidthRequest="500"          
+        IsPassword="True"
+            />
+        </Border>
+
+        <Button
+            Text="Login"
+            FontSize="Small"
+            Clicked="Login_Clicked"
+            BackgroundColor="#008fff"
+            MinimumWidthRequest="500" 
+        />
+
+        <Label
+            x:Name="sysMessage"
             VerticalOptions="Center"
-            Margin="5"
-            MinimumWidthRequest="500"          
-            IsPassword="True"
-                    />
-            </Border>
+            HorizontalOptions="Center"
+        />
 
-            <Button
-                Text="Login"
-                FontSize="Small"
-                Clicked="Login_Clicked"
-                BackgroundColor="#008fff"
-                MinimumWidthRequest="500" 
-                />
-
-            <Label
-                x:Name="sysMessage"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                />
-
-
-
-            <Button
-                x:Name="NewPageButton"
-                Clicked="OnSettingsButtonClicked" Text="Go to next page!">
-                
-            </Button> 
+        <Button
+            x:Name="NewPageButton"
+            Clicked="OnSettingsButtonClicked" Text="Go to next page!"
+            IsVisible="false">
+        </Button>
 
         </StackLayout>
     </ScrollView>
