@@ -47,7 +47,8 @@
         MaxLength="64"
         VerticalOptions="Center"
         Margin="5"
-        MinimumWidthRequest="500"          
+        MinimumWidthRequest="500"     
+        TextColor="Black"          
         IsPassword="True"
             />
         </Border>
