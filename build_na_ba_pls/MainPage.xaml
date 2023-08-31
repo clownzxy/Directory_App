@@ -20,7 +20,7 @@
         Padding="-5">
                 <Entry Placeholder="Username"
             x:Name="inputUsername"
-            MaxLength="64
+            MaxLength="64"
             MaximumWidthRequest="400"
             VerticalOptions="Center"
             />
