@@ -10,7 +10,7 @@
 
         }
 
-        private void OnSettingsButtonClicked(object sender, EventArgs e)
+        private void TestTap(object sender, EventArgs e)
         {
             Application.Current.MainPage.Navigation.PushModalAsync(new Register(), true);
         }

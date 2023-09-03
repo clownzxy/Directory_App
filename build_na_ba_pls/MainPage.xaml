@@ -3,6 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="build_na_ba_pls.MainPage">
 
+
+    <ContentPage.WidthRequest>1920</ContentPage.WidthRequest>
+    <ContentPage.HeightRequest>1080</ContentPage.HeightRequest>
+
     <ScrollView>
         <StackLayout
             x:Name="StackLayoutMain"
@@ -30,19 +34,19 @@
                 </Entry>
             </Border>
 
-        <Label
+            <Label
             Text="Password"
             Margin="0,-11"
         />
 
-        <Border Stroke="#000000"
+            <Border Stroke="#000000"
         StrokeThickness="1"
         StrokeShape="Rectangle 40,0,0,40"
         Background="#FFFFFF"
         MinimumWidthRequest="500"
         >
 
-            <Entry Placeholder="Password"
+                <Entry Placeholder="Password"
         x:Name="inputPassword"
         MaxLength="64"
         VerticalOptions="Center"
@@ -51,27 +55,32 @@
         TextColor="Black"          
         IsPassword="True"
             />
-        </Border>
+            </Border>
 
-        <Button
+            <Button
             Text="Login"
             FontSize="Small"
             Clicked="Login_Clicked"
             BackgroundColor="#008fff"
             MinimumWidthRequest="500" 
-        />
+            />
 
-        <Label
+            <Label
+                Text="Click here!"
+                HorizontalOptions="Center">   
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TestTap"></TapGestureRecognizer>
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label
             x:Name="sysMessage"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-        />
+            />
 
-        <Button
-            x:Name="NewPageButton"
-            Clicked="OnSettingsButtonClicked" Text="Go to next page!"
-            IsVisible="false">
-        </Button>
+
+
 
         </StackLayout>
     </ScrollView>

@@ -3,26 +3,111 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="build_na_ba_pls.Register"
              Title="Register">
-    <VerticalStackLayout>
-        <Label 
-            Text="ALLEN PAHAK"
-            FontSize="100"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center"
-            TextColor="White"/>
 
-        <BoxView Color="CornflowerBlue"
-             CornerRadius="10"
-             WidthRequest="160"
-             HeightRequest="160"
-             VerticalOptions="Center"
-             HorizontalOptions="Start" />
+    <Grid>
+        <Grid.RowDefinitions>
+        <RowDefinition Height="90*"/>
+        <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="90*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
 
-        <BoxView Color="CornflowerBlue"
-     CornerRadius="10"
-     WidthRequest="160"
-     HeightRequest="160"
-     VerticalOptions="Center"
-     HorizontalOptions="End" />
-    </VerticalStackLayout>
+        <VerticalStackLayout
+            Grid.Column="0"
+            Grid.Row="0"
+            Padding="10"
+            Spacing="10"
+            WidthRequest="500">
+
+
+            <HorizontalStackLayout
+                Spacing="10"
+                VerticalOptions="Center">
+                <Label
+                    Padding="10"
+                    Text="Student ID"></Label>
+                <Entry
+                    MinimumWidthRequest="400"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                    Padding="10"
+                    Text="First Name"></Label>
+                <Entry
+                    MinimumWidthRequest="400"></Entry>
+                
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                    Padding="10"
+                    Text="Last Name">
+                </Label>
+                <Entry
+                    MinimumWidthRequest="400"></Entry>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+        Padding="10"
+        Text="Email">
+                </Label>
+                <Entry
+        MinimumWidthRequest="400"></Entry>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+        Padding="10"
+        Text="Password">
+                </Label>
+                <Entry
+        MinimumWidthRequest="400"></Entry>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+        Padding="10"
+        Text="Confirm &#x0d;&#x0a;Password">
+                </Label>
+                <Entry
+        MinimumWidthRequest="400"></Entry>
+
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout
+                Grid.Column="1"
+                Grid.Row="0"
+                Padding="10"
+                Spacing="10"
+                WidthRequest="500">
+            
+
+
+
+
+            <HorizontalStackLayout
+                Spacing="10"
+                HorizontalOptions="Center">
+                <Label
+         VerticalTextAlignment="Center"
+                    WidthRequest="120"
+         Text="Gender"></Label>
+                <RadioButton></RadioButton>
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+        
+        
+    </Grid>
+    
+    
 </ContentPage>
