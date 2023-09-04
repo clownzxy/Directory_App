@@ -4,7 +4,9 @@
              x:Class="build_na_ba_pls.Register"
              Title="Register">
 
-    <Grid>
+    <Grid
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
         <Grid.RowDefinitions>
         <RowDefinition Height="90*"/>
         <RowDefinition Height="10*"/>
@@ -13,95 +15,126 @@
             <ColumnDefinition Width="90*"/>
             <ColumnDefinition Width="10*"/>
         </Grid.ColumnDefinitions>
-
+    
         <VerticalStackLayout
             Grid.Column="0"
             Grid.Row="0"
-            Padding="10"
-            Spacing="10"
-            WidthRequest="500">
+            Spacing="20"
+            WidthRequest="700">
 
 
             <HorizontalStackLayout
-                Spacing="10"
-                VerticalOptions="Center">
+                HorizontalOptions="Start">
                 <Label
                     Padding="10"
-                    Text="Student ID"></Label>
+                    Text="Student ID"
+                    WidthRequest="100"></Label>
                 <Entry
-                    MinimumWidthRequest="400"></Entry>
-            </HorizontalStackLayout>
-
-            <HorizontalStackLayout>
-                <Label
-                    Padding="10"
-                    Text="First Name"></Label>
-                <Entry
-                    MinimumWidthRequest="400"></Entry>
-                
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
                     Padding="10"
-                    Text="Last Name">
+                    Text="First Name"
+                    WidthRequest="100"></Label>
+                <Entry
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                    Padding="10"
+                    Text="Last Name"
+                    WidthRequest="100">
                 </Label>
                 <Entry
-                    MinimumWidthRequest="400"></Entry>
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-        Padding="10"
-        Text="Email">
+                    Padding="10"
+                    Text="Email"
+                    WidthRequest="100">
                 </Label>
                 <Entry
-        MinimumWidthRequest="400"></Entry>
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-        Padding="10"
-        Text="Password">
+                    Padding="10"
+                    Text="Password"
+                    WidthRequest="100">
                 </Label>
                 <Entry
-        MinimumWidthRequest="400"></Entry>
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-        Padding="10"
-        Text="Confirm &#x0d;&#x0a;Password">
+                    Padding="10"
+                    Text="Confirm &#x0d;&#x0a;Password"
+                    WidthRequest="100">
                 </Label>
                 <Entry
-        MinimumWidthRequest="400"></Entry>
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
 
             </HorizontalStackLayout>
-
         </VerticalStackLayout>
-
+        
+        
+        
+        
+        
         <VerticalStackLayout
                 Grid.Column="1"
                 Grid.Row="0"
                 Padding="10"
-                Spacing="10"
                 WidthRequest="500">
-            
-
-
-
 
             <HorizontalStackLayout
-                Spacing="10"
-                HorizontalOptions="Center">
+                Spacing="10">
                 <Label
          VerticalTextAlignment="Center"
                     WidthRequest="120"
+                    Padding="10"
          Text="Gender"></Label>
-                <RadioButton></RadioButton>
+                <RadioButton
+                    Content="Male"></RadioButton>
+                <RadioButton
+                    Content="Female">
+                </RadioButton>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10">
+                <Label
+                    Text="Birth Date"
+                    Padding="10">
+                </Label>
+                <DatePicker></DatePicker>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout
+                Spacing="10">
+                <Label
+                    Text="Mobile No."
+                    Padding="10">
+                </Label>
+                <Entry
+                    MinimumWidthRequest="400"
+                    WidthRequest="250"></Entry>
             </HorizontalStackLayout>
             
         </VerticalStackLayout>
