@@ -1,189 +1,169 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="build_na_ba_pls.Register"
-             Title="Register">
+<ContentPage
+    x:Class="build_na_ba_pls.Register"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Register">
 
-    <Grid
-        VerticalOptions="Center"
-        HorizontalOptions="Center">
+    <Grid HorizontalOptions="Center" VerticalOptions="Center">
         <Grid.RowDefinitions>
-        <RowDefinition Height="90*"/>
-        <RowDefinition Height="10*"/>
+            <RowDefinition Height="90*" />
+            <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="90*"/>
-            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="90*" />
+            <ColumnDefinition Width="10*" />
         </Grid.ColumnDefinitions>
-    
+
         <VerticalStackLayout
-            Grid.Column="0"
             Grid.Row="0"
+            Grid.Column="0"
             Spacing="10"
             WidthRequest="700">
 
 
-            <HorizontalStackLayout
-                HorizontalOptions="Start">
+            <HorizontalStackLayout HorizontalOptions="Start">
                 <Label
-                    Padding="10"
                     Margin="-100,0,50,0"
+                    Padding="10"
                     Text="Student ID"
-                    WidthRequest="100"></Label> 
+                    WidthRequest="100" />
                 <Entry
-                    
+                    Margin="0,0,32,0"
                     MinimumWidthRequest="350"
-                    WidthRequest="250" Margin="0,0,32,0"></Entry>
+                    WidthRequest="250" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
+                    Margin="-100,0,50,0"
                     Padding="10"
-Margin="-100,0,50,0"
                     Text="First Name"
-                    WidthRequest="100"></Label>
-                <Entry
-                    MinimumWidthRequest="350"
-                    WidthRequest="250"></Entry>
+                    WidthRequest="100" />
+                <Entry MinimumWidthRequest="350" WidthRequest="250" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
+                    Margin="-100,0,50,0"
                     Padding="10"
-Margin="-100,0,50,0"
                     Text="Last Name"
-                    WidthRequest="100">
-                </Label>
-                <Entry
-                    MinimumWidthRequest="350"
-                    WidthRequest="250"></Entry>
+                    WidthRequest="100" />
+                <Entry MinimumWidthRequest="350" WidthRequest="250" />
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
+                    Margin="-100,0,50,0"
                     Padding="10"
-Margin="-100,0,50,0"
                     Text="Email"
-                    WidthRequest="100">
-                </Label>
-                <Entry
-                    MinimumWidthRequest="350"
-                    WidthRequest="250"></Entry>
+                    WidthRequest="100" />
+                <Entry MinimumWidthRequest="350" WidthRequest="250" />
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
+                    Margin="-100,0,50,0"
                     Padding="10"
-Margin="-100,0,50,0"
                     Text="Password"
-                    WidthRequest="100">
-                </Label>
-                <Entry
-                    MinimumWidthRequest="350"
-                    WidthRequest="250"></Entry>
+                    WidthRequest="100" />
+                <Entry MinimumWidthRequest="350" WidthRequest="250" />
 
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
+                    Margin="-100,0,50,0"
                     Padding="10"
-Margin="-100,0,50,0"
+                    HeightRequest="50"
                     Text="Confirm Password"
-                    WidthRequest="100"
-                    HeightRequest="50">
-                </Label>
+                    WidthRequest="100" />
                 <Entry
                     MinimumHeightRequest="10"
                     MinimumWidthRequest="350"
-                    WidthRequest="250"></Entry>
+                    WidthRequest="250" />
 
             </HorizontalStackLayout>
         </VerticalStackLayout>
-        
-        
-        
-        
-        
+
+
+
+
+
         <VerticalStackLayout
-                Grid.Column="1"
-                Grid.Row="0"
-                Padding="1,1,1,20"
-                WidthRequest="600"
-                Spacing="10">
-            
+            Grid.Row="0"
+            Grid.Column="1"
+            Padding="1,1,1,20"
+            Spacing="10"
+            WidthRequest="600">
+
 
             <HorizontalStackLayout>
                 <Label
-                    Padding="10"
                     Margin="0,0,70,0"
-         Text="Gender"></Label>
-                <RadioButton
-                    Content="Male"></RadioButton>
-                <RadioButton
-                    Content="Female">
-                </RadioButton>
+                    Padding="10"
+                    Text="Gender" />
+                <RadioButton Content="Male" />
+                <RadioButton Content="Female" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-                    Text="Birth Date"
+                    Margin="0,0,54,0"
                     Padding="10"
-                    Margin="0,0,54,0">
-                </Label>
-                <DatePicker></DatePicker>
+                    Text="Birth Date" />
+                <DatePicker />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-                    Text="Mobile No."
+                    Margin="0,0,50,0"
                     Padding="10"
-                    Margin="0,0,50,0">
-                </Label>
-                <Entry
-                    MinimumWidthRequest="400"
-                    WidthRequest="250"></Entry>
+                    Text="Mobile No." />
+                <Entry MinimumWidthRequest="400" WidthRequest="250" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-                    Text="City"
+                    Margin="0,0,95,0"
                     Padding="10"
-                    Margin="0,0,95,0"></Label>
-                <Entry
-                    MinimumWidthRequest="400"
-                    WidthRequest="250"></Entry>
+                    Text="City" />
+                <Entry MinimumWidthRequest="400" WidthRequest="250" />
             </HorizontalStackLayout>
 
 
             <HorizontalStackLayout>
                 <Label
-                    Text="School Program"
+                    Margin="0,0,16,0"
                     Padding="10"
-                    Margin="0,0,16,0"></Label>
-                <Picker></Picker>
+                    Text="School Program" />
+                <Picker
+                    x:Name="opawallen"
+                    ItemsSource="{Binding SchoolProgram}"
+                    SelectedIndexChanged="opawallen_SelectedIndexChanged" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-                    Text="Course"
+                    Margin="0,0,74,0"
                     Padding="10"
-                    Margin="0,0,74,0"></Label>
-                <Picker></Picker>
+                    Text="Course" />
+                <Picker x:Name="opawallenallen" ItemsSource="{Binding Course}" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
                 <Label
-                    Text="Year Level"
+                    Margin="0,0,54,0"
                     Padding="10"
-                    Margin="0,0,54,0"></Label>
-                <Picker></Picker>
+                    Text="Year Level" />
+                <Picker />
             </HorizontalStackLayout>
         </VerticalStackLayout>
-        
-        
+
+
     </Grid>
-    
-    
+
+
 </ContentPage>
