@@ -139,7 +139,7 @@
                     Margin="0,0,16,0"
                     Padding="10"
                     Text="School Program" />
-                <Picker />
+                <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
