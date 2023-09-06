@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="DirectoryApp.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <ScrollView>
+        <StackLayout
+            x:Name="StackLayoutMain"
+            Padding="200,200,200,200"
+            Spacing="12"
+            VerticalOptions="Center">
+
+            <Label Margin="0,-11" Text="Username" />
+
+            <Border
+                Background="#FFFFFF"
+                Stroke="#000000"
+                StrokeShape="Rectangle 40,0,0,40"
+                StrokeThickness="1">
+                <Entry
+                    x:Name="inputUsername"
+                    Margin="5"
+                    MaxLength="32"
+                    MinimumWidthRequest="500"
+                    Placeholder="Username"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </Border>
+
+            <Label Margin="0,-11" Text="Password" />
+
+            <Border
+                Background="#FFFFFF"
+                MinimumWidthRequest="500"
+                Stroke="#000000"
+                StrokeShape="Rectangle 40,0,0,40"
+                StrokeThickness="1">
+
+                <Entry
+                    x:Name="inputPassword"
+                    Margin="5"
+                    IsPassword="True"
+                    MaxLength="64"
+                    MinimumWidthRequest="500"
+                    Placeholder="Password"
+                    TextColor="Black"
+                    VerticalOptions="Center" />
+            </Border>
+
+            <Button
+                BackgroundColor="#008fff"
+                Clicked="Login_Clicked"
+                FontSize="Small"
+                MinimumWidthRequest="500"
+                Text="Login" />
+
+            <Label HorizontalOptions="Center" Text="Click here!">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TestTap" />
+                </Label.GestureRecognizers>
+            </Label>
+
+            <Label
+                x:Name="sysMessage"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+
+
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
