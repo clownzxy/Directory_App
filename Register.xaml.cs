@@ -38,7 +38,8 @@ public partial class Register : ContentPage
 
         picker.ItemsSource = SchoolProgram;
         coursePicker.ItemsSource = Course;
-        picker.SelectedItem = "Default";
+        picker.SelectedItem = "DEFAULT";
+        coursePicker.SelectedItem = "DEFAULT";
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
         BindingContext = this;
     }
@@ -53,17 +54,15 @@ public partial class Register : ContentPage
         int selectedIndex = picker.SelectedIndex;
 
         Course.Clear();
-
-        if (selectedIndex == 1 )
+        if(selectedIndex == 1 ) 
         {
             Course.Add("BSCPE");
             Course.Add("BSCE");
             Course.Add("BSCE");
-            SchoolProgram.Remove("DEFAULT");
-        }else if(selectedIndex == 2 ) 
-        {
-            Course.Add("BSACC");
+        }else if(selectedIndex == 2) 
+        {   
             Course.Add("BSOM");
+            Course.Add("BSACC");
         }
     }
 
