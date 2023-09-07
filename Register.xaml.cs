@@ -8,8 +8,9 @@ public partial class Register : ContentPage
 
         List<String> pickerList = new List<string>();
         pickerList.Add("Default");
-        pickerList.Add("Test");
-        pickerList.Add("Test1");
+        pickerList.Add("SOE");
+        pickerList.Add("SBM");
+        pickerList.Add("SAMS");
 
         List<String> course = new List<String>();
         course.Add("Default");
@@ -17,6 +18,7 @@ public partial class Register : ContentPage
         picker.ItemsSource = pickerList;
         picker.SelectedItem = "Default";
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
+
     }
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -25,9 +27,9 @@ public partial class Register : ContentPage
         int selectedIndex = picker.SelectedIndex;
 
 
-        if (selectedIndex != -1 )
+        if (selectedIndex == 1 )
         {
-            picker.SelectedItem = picker.Items[selectedIndex];
+            //course.Add("CPE");
         }
     }
 

@@ -28,10 +28,17 @@
                     Padding="10"
                     Text="Student ID"
                     WidthRequest="100" />
-                <Entry
-                    Margin="0,0,32,0"
-                    MinimumWidthRequest="350"
-                    WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
+                </Border>
+
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -40,7 +47,13 @@
                     Padding="10"
                     Text="First Name"
                     WidthRequest="100" />
-                <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -49,7 +62,13 @@
                     Padding="10"
                     Text="Last Name"
                     WidthRequest="100" />
-                <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
 
             </HorizontalStackLayout>
 
@@ -59,7 +78,13 @@
                     Padding="10"
                     Text="Email"
                     WidthRequest="100" />
-                <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
 
             </HorizontalStackLayout>
 
@@ -69,7 +94,13 @@
                     Padding="10"
                     Text="Password"
                     WidthRequest="100" />
-                <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
 
             </HorizontalStackLayout>
 
@@ -80,10 +111,13 @@
                     HeightRequest="50"
                     Text="Confirm Password"
                     WidthRequest="100" />
-                <Entry
-                    MinimumHeightRequest="10"
-                    MinimumWidthRequest="350"
-                    WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
 
             </HorizontalStackLayout>
         </VerticalStackLayout>
@@ -114,7 +148,13 @@
                     Margin="0,0,54,0"
                     Padding="10"
                     Text="Birth Date" />
-                <DatePicker />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <DatePicker MinimumWidthRequest="350" VerticalOptions="Center" />
+                </Border>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -122,7 +162,13 @@
                     Margin="0,0,50,0"
                     Padding="10"
                     Text="Mobile No." />
-                <Entry MinimumWidthRequest="400" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -130,7 +176,13 @@
                     Margin="0,0,95,0"
                     Padding="10"
                     Text="City" />
-                <Entry MinimumWidthRequest="400" WidthRequest="250" />
+                <Border
+                    Background="White"
+                    Stroke="#000000"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                </Border>
             </HorizontalStackLayout>
 
 
@@ -139,7 +191,16 @@
                     Margin="0,0,16,0"
                     Padding="10"
                     Text="School Program" />
-                <Picker x:Name="picker" SelectedIndexChanged="Picker_SelectedIndexChanged" />
+                <Border
+                    Stroke="Black"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Picker
+                        x:Name="picker"
+                        SelectedIndexChanged="Picker_SelectedIndexChanged"
+                        Visual="Default" />
+                </Border>
+
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
