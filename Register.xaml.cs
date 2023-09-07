@@ -1,35 +1,69 @@
+using System.Collections.ObjectModel;
+
 namespace DirectoryApp;
 
 public partial class Register : ContentPage
 {
-	public Register()
+    private ObservableCollection<String> _schoolProgram;
+    private ObservableCollection<String> _course;
+
+    public ObservableCollection<String> SchoolProgram
+    {
+        get { return _schoolProgram; }
+        set { _schoolProgram = value; }
+    }
+
+    public ObservableCollection<String> Course
+    {
+        get { return _course; }
+        set { _course = value; }
+    }
+
+
+    public Register()
 	{
 		InitializeComponent();
 
-        List<String> pickerList = new List<string>();
-        pickerList.Add("Default");
-        pickerList.Add("SOE");
-        pickerList.Add("SBM");
-        pickerList.Add("SAMS");
+        SchoolProgram = new ObservableCollection<String>()
+        {
+            "DEFAULT",
+            "SOE",
+            "SBM"
+        };
 
-        List<String> course = new List<String>();
-        course.Add("Default");
+        Course = new ObservableCollection<string>
+        {
+            "DEFAULT"
+        };
 
-        picker.ItemsSource = pickerList;
+        picker.ItemsSource = SchoolProgram;
+        coursePicker.ItemsSource = Course;
         picker.SelectedItem = "Default";
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
-
+        BindingContext = this;
     }
+
+    
+
+    
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
     {
         var picker = (Picker)sender;
         int selectedIndex = picker.SelectedIndex;
 
+        Course.Clear();
 
         if (selectedIndex == 1 )
         {
-            //course.Add("CPE");
+            Course.Add("BSCPE");
+            Course.Add("BSCE");
+            Course.Add("BSCE");
+            SchoolProgram.Remove("DEFAULT");
+        }else if(selectedIndex == 2 ) 
+        {
+            Course.Add("BSACC");
+            Course.Add("BSOM");
         }
     }
 

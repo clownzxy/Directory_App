@@ -208,7 +208,13 @@
                     Margin="0,0,74,0"
                     Padding="10"
                     Text="Course" />
-                <Picker />
+                <Border
+                    Stroke="Black"
+                    StrokeShape="Rectangle"
+                    StrokeThickness="1">
+                    <Picker x:Name="coursePicker" />
+                </Border>
+
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
