@@ -34,6 +34,7 @@
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
                     <Entry
+                        x:Name="entryStudentID"
                         MinimumWidthRequest="350"
                         TextColor="Black"
                         WidthRequest="250" />
@@ -52,7 +53,11 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryFirstName"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
             </HorizontalStackLayout>
 
@@ -67,7 +72,11 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryLastName"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
 
             </HorizontalStackLayout>
@@ -83,7 +92,11 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryEmail"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
 
             </HorizontalStackLayout>
@@ -99,7 +112,12 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryPassword"
+                        IsPassword="True"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
 
             </HorizontalStackLayout>
@@ -116,7 +134,12 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryConfirmPassword"
+                        IsPassword="True"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
 
             </HorizontalStackLayout>
@@ -139,8 +162,8 @@
                     Margin="0,0,70,0"
                     Padding="10"
                     Text="Gender" />
-                <RadioButton Content="Male" />
-                <RadioButton Content="Female" />
+                <RadioButton x:Name="radioMale" Content="Male" />
+                <RadioButton x:Name="radioFemale" Content="Female" />
             </HorizontalStackLayout>
 
             <HorizontalStackLayout>
@@ -153,7 +176,10 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <DatePicker MinimumWidthRequest="350" VerticalOptions="Center" />
+                    <DatePicker
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        VerticalOptions="Center" />
                 </Border>
             </HorizontalStackLayout>
 
@@ -167,7 +193,11 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryMobileNumber"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
             </HorizontalStackLayout>
 
@@ -181,7 +211,11 @@
                     Stroke="#000000"
                     StrokeShape="Rectangle"
                     StrokeThickness="1">
-                    <Entry MinimumWidthRequest="350" WidthRequest="250" />
+                    <Entry
+                        x:Name="entryCity"
+                        MinimumWidthRequest="350"
+                        TextColor="Black"
+                        WidthRequest="250" />
                 </Border>
             </HorizontalStackLayout>
 
