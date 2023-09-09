@@ -6,6 +6,7 @@ public partial class Register : ContentPage
 {
     private ObservableCollection<String> _schoolProgram;
     private ObservableCollection<String> _course;
+    private ObservableCollection<String> _yrLvl;
 
     public ObservableCollection<String> SchoolProgram
     {
@@ -19,29 +20,47 @@ public partial class Register : ContentPage
         set { _course = value; }
     }
 
+    public ObservableCollection<String> YrLvl
+    {
+        get { return _yrLvl;}
+        set { _yrLvl = value; }
+    }
+
 
     public Register()
 	{
 		InitializeComponent();
 
-        SchoolProgram = new ObservableCollection<String>()
+        ObservableCollection<String>SchoolProgram = new ObservableCollection<String>()
         {
             "DEFAULT",
             "SOE",
             "SBM"
         };
 
-        Course = new ObservableCollection<string>
+        ObservableCollection<String>Course = new ObservableCollection<string>
         {
             "DEFAULT"
         };
 
+        ObservableCollection<String> YrLvl = new ObservableCollection<string>
+        {
+            "DEFAULT",
+            "1st Year",
+            "2nd Year",
+            "3rd Year",
+            "4th Year",
+            "Irregular"
+        };
+
         picker.ItemsSource = SchoolProgram;
         coursePicker.ItemsSource = Course;
+        yrLvlPicker.ItemsSource = YrLvl;
         picker.SelectedItem = "DEFAULT";
         coursePicker.SelectedItem = "DEFAULT";
+        yrLvlPicker.SelectedItem = "DEFAULT";
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
-        BindingContext = this;
+        this.BindingContext = this;
     }
 
     

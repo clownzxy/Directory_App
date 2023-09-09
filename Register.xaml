@@ -222,7 +222,7 @@
                     Margin="0,0,54,0"
                     Padding="10"
                     Text="Year Level" />
-                <Picker />
+                <Picker x:Name="yrLvlPicker" />
             </HorizontalStackLayout>
         </VerticalStackLayout>
 
