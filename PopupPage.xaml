@@ -5,44 +5,133 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
-    <Grid
+
+    <ScrollView
         Margin="15"
-        ColumnSpacing="20"
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        WidthRequest="500">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="100*" />
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="100*" />
-        </Grid.ColumnDefinitions>
+        HeightRequest="700"
+        WidthRequest="600">
+        <Grid
+            ColumnDefinitions="50*,50*"
+            ColumnSpacing="10"
+            HorizontalOptions="Center"
+            RowDefinitions="90*,10*"
+            RowSpacing="10"
+            VerticalOptions="Center">
 
-        <VerticalStackLayout
-            Grid.Row="0"
-            Grid.Column="0"
-            BackgroundColor="Green"
-            WidthRequest="300">
+            <VerticalStackLayout
+                Grid.Column="0"
+                Spacing="5"
+                WidthRequest="250">
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Student ID:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding StudentID}" WidthRequest="150" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="First Name:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding FirstName}" WidthRequest="150" />
+                </HorizontalStackLayout>
 
-            <HorizontalStackLayout BackgroundColor="Yellow" HorizontalOptions="Center">
-                <Label
-                    Margin="-100,0,50,0"
-                    Padding="10"
-                    Text="Student ID:"
-                    WidthRequest="100" />
-                <Label
-                    Margin="-100,0,50,0"
-                    Padding="10"
-                    Text="{Binding StudentID}"
-                    WidthRequest="100" />
-            </HorizontalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Last Name:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding LastName}" WidthRequest="150" />
+                </HorizontalStackLayout>
 
-        </VerticalStackLayout>
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Email:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding Email}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Password:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding Password}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Gender:"
+                        WidthRequest="100" />
+                    <Label x:Name="lblGender" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Birth Date"
+                        WidthRequest="100" />
+                    <Label Text="{Binding BirthDate}" WidthRequest="150" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout
+                Grid.Column="1"
+                Spacing="5"
+                WidthRequest="250">
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Mobile Number:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding MobileNumber}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="City:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding City}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="School Program:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding SchoolProgram}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Course:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding Courses}" WidthRequest="150" />
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout>
+                    <Label
+                        FontAttributes="Bold"
+                        Text="Year Level:"
+                        WidthRequest="100" />
+                    <Label Text="{Binding Year}" WidthRequest="150" />
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+
+
+        </Grid>
+    </ScrollView>
 
 
 
 
-    </Grid>
+
 
 
 </toolkit:Popup>
