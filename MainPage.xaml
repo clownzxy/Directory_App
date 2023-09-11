@@ -55,7 +55,7 @@
                 MinimumWidthRequest="500"
                 Text="Login" />
 
-            <Label HorizontalOptions="Center" Text="Click here!">
+            <Label HorizontalOptions="Center" Text="New User? Register here.">
                 <Label.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TestTap" />
                 </Label.GestureRecognizers>

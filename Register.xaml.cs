@@ -37,7 +37,12 @@ public partial class Register : ContentPage
         {
             "-SELECT-",
             "SOE",
-            "SBM"
+            "SBM",
+            "SAS",
+            "SOED",
+            "SCS",
+            "SAMS",
+            "SOL",
         };
 
         Course = new ObservableCollection<string>
@@ -167,6 +172,15 @@ public partial class Register : ContentPage
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
     {
+        /*
+         * "-SELECT-",
+        "SOE",
+            "SBM",
+            "SAS",
+            "SOED",
+            "SCS",
+            "SAMS",
+            "SOL",*/
         var picker = (Picker)sender;
         int selectedIndex = picker.SelectedIndex;
 
@@ -175,12 +189,47 @@ public partial class Register : ContentPage
         {
             Course.Add("BSCPE");
             Course.Add("BSCE");
-            Course.Add("BSCE");
+            Course.Add("BSECE");
+            Course.Add("BSEE");
+            Course.Add("BSIE");
+            Course.Add("BSME");
+
         }
         else if (selectedIndex == 2)
         {
-            Course.Add("BSOM");
-            Course.Add("BSACC");
+            Course.Add("BSBA-HRDM");
+            Course.Add("BSBA");
+            Course.Add("BSBA-MM");
+            Course.Add("BSBA-FM");
+            Course.Add("BS-Entrep");
+            Course.Add("BSA");
+            Course.Add("BSMA");
+            Course.Add("BSHM");
+        }else if(selectedIndex == 3)
+        {
+            Course.Add("BAC");
+            Course.Add("BAJ");
+            Course.Add("BALIACOM");
+            Course.Add("BSBIO");
+            Course.Add("BAPS");
+            Course.Add("BAIS");
+            Course.Add("BA-PHILO");
+            Course.Add("BA-PSYCH");
+            Course.Add("BA-English");
+        }else if (selectedIndex == 4)
+        {
+            Course.Add("BS-Educ");
+        }else if (selectedIndex == 5)
+        {
+            Course.Add("BSCS");
+            Course.Add("BSIT");
+            Course.Add("BSIS");
+        }else if (selectedIndex == 6)
+        {
+            Course.Add("BS-Nursing");
+        }else if (selectedIndex == 7)
+        {
+            Course.Add("BS-Law");
         }
     }
 

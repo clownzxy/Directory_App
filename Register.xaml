@@ -38,6 +38,7 @@
                         x:Name="entryStudentID"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Required. Numeric values only"
                         WidthRequest="250" />
                 </Border>
 
@@ -58,6 +59,7 @@
                         x:Name="entryFirstName"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Required"
                         WidthRequest="250" />
                 </Border>
             </HorizontalStackLayout>
@@ -77,6 +79,7 @@
                         x:Name="entryLastName"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Required"
                         WidthRequest="250" />
                 </Border>
 
@@ -97,6 +100,7 @@
                         x:Name="entryEmail"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Required"
                         WidthRequest="250" />
                 </Border>
 
@@ -118,6 +122,7 @@
                         IsPassword="True"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Required"
                         WidthRequest="250" />
                 </Border>
 
@@ -199,6 +204,7 @@
                         x:Name="entryMobileNumber"
                         MinimumWidthRequest="350"
                         TextColor="Black"
+                        ToolTipProperties.Text="Number Input Only"
                         WidthRequest="250" />
                 </Border>
             </HorizontalStackLayout>

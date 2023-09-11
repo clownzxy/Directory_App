@@ -26,55 +26,84 @@
                     <Label
                         FontAttributes="Bold"
                         Text="Student ID:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding StudentID}" WidthRequest="150" />
+
+                    <Label
+                        Text="{Binding StudentID}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="First Name:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding FirstName}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding FirstName}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Last Name:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding LastName}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding LastName}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Email:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding Email}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding Email}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Password:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding Password}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding Password}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Gender:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label x:Name="lblGender" WidthRequest="150" />
+                    <Label
+                        x:Name="lblGender"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Birth Date"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding BirthDate}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding BirthDate}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>
 
@@ -87,40 +116,60 @@
                     <Label
                         FontAttributes="Bold"
                         Text="Mobile Number:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding MobileNumber}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding MobileNumber}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="City:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding City}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding City}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="School Program:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding SchoolProgram}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding SchoolProgram}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Course:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding Courses}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding Courses}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
 
                 <HorizontalStackLayout>
                     <Label
                         FontAttributes="Bold"
                         Text="Year Level:"
+                        TextColor="Black"
                         WidthRequest="100" />
-                    <Label Text="{Binding Year}" WidthRequest="150" />
+                    <Label
+                        Text="{Binding Year}"
+                        TextColor="Black"
+                        WidthRequest="150" />
                 </HorizontalStackLayout>
             </VerticalStackLayout>
 
