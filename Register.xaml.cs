@@ -83,7 +83,6 @@ public partial class Register : ContentPage
         theStudent.Email = entryEmail.Text;
         theStudent.Password = entryPassword.Text;
         theStudent.ConfirmPassword = entryConfirmPassword.Text;
-        //no gender yet idk how to do that shit same with birth date
         theStudent.Gender = radioGenderIsCheck();
         theStudent.MobileNumber = entryMobileNumber.Text;
         theStudent.City = entryCity.Text;
