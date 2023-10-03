@@ -57,7 +57,7 @@
 
             <Label HorizontalOptions="Center" Text="New User? Register here.">
                 <Label.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TestTap" />
+                    <TapGestureRecognizer Tapped="RegisterPage" />
                 </Label.GestureRecognizers>
             </Label>
 

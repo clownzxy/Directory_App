@@ -1,18 +1,26 @@
-﻿namespace DirectoryApp
+﻿using DirectoryApp.ViewModel;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
+namespace DirectoryApp
 {
     public partial class MainPage : ContentPage
     {
         string user = "admin";
         string pass = "123";
+
+       MainPageViewModel viewModel = new MainPageViewModel();
+
         public MainPage()
         {
             InitializeComponent();
+            viewModel.FileCreate();
 
         }
 
-        private void TestTap(object sender, EventArgs e)
+        private void RegisterPage(object sender, EventArgs e)
         {
-            Application.Current.MainPage.Navigation.PushModalAsync(new Register(), true);
+            Navigation.PushAsync(new Register());
         }
 
 

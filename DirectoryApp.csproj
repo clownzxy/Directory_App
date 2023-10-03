@@ -54,19 +54,19 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="PopupPage.xaml.cs">
+	  <Compile Update="View\PopupPage.xaml.cs">
 	    <DependentUpon>PopupPage.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Register.xaml.cs">
+	  <Compile Update="View\Register.xaml.cs">
 	    <DependentUpon>Register.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="PopupPage.xaml">
+	  <MauiXaml Update="View\PopupPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Register.xaml">
+	  <MauiXaml Update="View\Register.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
