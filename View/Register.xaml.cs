@@ -1,21 +1,31 @@
+using CommunityToolkit.Maui.Core.Extensions;
 using CommunityToolkit.Maui.Views;
 using DirectoryApp.Model;
 using System.Collections.ObjectModel;
+using System.Text.Json;
 using static System.String;
 
 namespace DirectoryApp;
 
 public partial class Register : ContentPage
 {
+    string maindir = FileSystem.Current.AppDataDirectory;
     private ObservableCollection<String> _schoolProgram;
     private ObservableCollection<String> _course;
     private ObservableCollection<String> _yrLvl;
     RegisterViewModel studentViewModel = new RegisterViewModel();
     private ObservableCollection<Student> _students;
+    private ObservableCollection<Student> _studentData;
     public ObservableCollection<String> SchoolProgram
     {
         get { return _schoolProgram; }
         set { _schoolProgram = value; }
+    }
+
+    public ObservableCollection<Student> StudentData
+    {
+        get { return _studentData;}
+        set { _studentData = value; }
     }
 
     public ObservableCollection<String> Course
@@ -58,7 +68,7 @@ public partial class Register : ContentPage
             "-SELECT-"
         };
 
-        ObservableCollection<String> YrLvl = new ObservableCollection<string>
+        ObservableCollection<String> YrLvl = new ObservableCollection<String>
         {
             "-SELECT-",
             "1st Year",
@@ -75,7 +85,7 @@ public partial class Register : ContentPage
         coursePicker.SelectedItem = "-SELECT-";
         yrLvlPicker.SelectedItem = "-SELECT-";
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
-        this.BindingContext = this;
+        BindingContext = studentViewModel;
     }
 
     
@@ -119,18 +129,40 @@ public partial class Register : ContentPage
 
     public bool ValidateForm()
     {
+
         bool firstEntry = false;
         bool secondEntry = false;
+        var filePath = Path.Combine(maindir, "Users.json");
+        //StudentData = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);*/
 
-        secondEntry = !IsNullOrEmpty(picker.SelectedItem.ToString()) && !IsNullOrEmpty(coursePicker.SelectedItem.ToString())
-        && !IsNullOrEmpty(yrLvlPicker.SelectedItem.ToString());
+        string jsonData = File.ReadAllText(filePath);
+        Students = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);
 
-        if (entryStudentID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
+        foreach(Student student in Students)
+        {
+            if (student.StudentID == entryStudentID.Text)
+            {
+                firstEntry = false;
+            }
+            else
+            {
+                secondEntry = true;
+            }
+        }
+
+        /*if (entryStudentID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
             && entryPassword.Text != null && entryConfirmPassword.Text == entryPassword.Text
             && entryMobileNumber.Text != null && entryCity.Text != null && datePickerBirthDate != null)
         {
             firstEntry = true;
         }
+        else
+        {
+            firstEntry = false;
+        }*/
+
+        secondEntry = !IsNullOrEmpty(picker.SelectedItem.ToString()) && !IsNullOrEmpty(coursePicker.SelectedItem.ToString())
+        && !IsNullOrEmpty(yrLvlPicker.SelectedItem.ToString());
 
         if (firstEntry&&secondEntry==true)
         {
