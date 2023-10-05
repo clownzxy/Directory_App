@@ -10,21 +10,24 @@ public class RegisterViewModel
 {
     private ObservableCollection<Student> productCollection = new ObservableCollection<Student>();
     string maindir = FileSystem.Current.AppDataDirectory;
-
-    public RegisterViewModel() {
-        ConvertToProductCollection();
-    }
-
-    public ObservableCollection<Student> ProductCollection 
-    { 
+    public ObservableCollection<Student> ProductCollection
+    {
         get { return productCollection; }
         set { productCollection = value; }
     }
+
+    public RegisterViewModel() {
+        FileCreate(productCollection);
+        ConvertToProductCollection();
+    }
+
+    
 
 	
 
     public void AddStudent(Student student)
     {
+
         productCollection.Add(student);
 
         SaveToFile(student);
@@ -38,6 +41,7 @@ public class RegisterViewModel
         json = JsonSerializer.Serialize(productCollection);
 
         File.WriteAllText(filePath, json);
+
         StudentFileCreate(student);
     }
 
@@ -61,5 +65,20 @@ public class RegisterViewModel
                 File.Create(filePath);
             }
         
+    }
+
+    public void FileCreate(ObservableCollection<Student>productCollection)
+    {
+        string filePath = Path.Combine(maindir, "Users.json");
+        productCollection.Add(null);
+
+        var jsonData = JsonSerializer.Serialize(productCollection);
+
+
+        if (!File.Exists(filePath))
+        {
+
+            File.WriteAllText(filePath, jsonData);
+        }
     }
 }

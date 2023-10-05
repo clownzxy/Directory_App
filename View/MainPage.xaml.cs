@@ -14,7 +14,7 @@ namespace DirectoryApp
         public MainPage()
         {
             InitializeComponent();
-            viewModel.FileCreate();
+            //viewModel.FileCreate();
 
         }
 
