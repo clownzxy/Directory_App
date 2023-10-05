@@ -3,170 +3,55 @@ namespace DirectoryApp.Model;
 
     public class Student
     {
-        private string _studentID;
-        private string _firstName;
-        private string _lastName;
-        private string _email;
-        private string _password;
-        private string _confirmPassword;
-        private string _schoolProgram;
-        private string _course;
-        private string _year;
-        private int _gender;
-        private string _mobileNumber;
-        private string _city;
-        private String _birthDate;
+    public string StudentID { get; set; }
+    public string StudentName { get; set; }
+    public string LastName { get; set; }
+    public string FirstName { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+    public string ConfirmPassword { get; set; }
+    public string SchoolProgram { get; set; }
+    public string Course { get; set; }
+    public string Year { get; set; }
+    public string Gender { get; set; }
+    public string MobileNumber { get; set; }
+    public string City { get; set; }
+    public String BirthDate { get; set; }
 
-        public String StudentID
-        {
-            get
-            {
-                return this._studentID;
-            }
-            set
-            {
-                this._studentID = value;
-            }
-        }
+    
 
-        public string FirstName
-        {
-            get
-            {
-                return this._firstName;
-            }
-            set
-            {
-                this._firstName = value;
-            }
-        }
+    public Student(string studentID, 
+        string firstName, 
+        string lastName, 
+        string email, 
+        string password
+        , string confirmPassword, 
+        string schoolProgram,
+        string course,
+        string year,
+        string gender, 
+        string mobileNumber,
+        string city, 
+        String birthDate)
+    {
+        StudentID = studentID;
+        StudentName = firstName;
+        LastName = lastName;
+        FirstName = firstName;
+        Email = email;
+        Password = password;
+        ConfirmPassword = confirmPassword;
+        SchoolProgram = schoolProgram;
+        Course = course;
+        Year = year;
+        Gender = gender;
+        MobileNumber = mobileNumber;
+        City = city;
+        BirthDate = birthDate;
+    }
+    
+        
 
-        public string LastName
-        {
-            get
-            {
-                return this._lastName;
-            }
-            set
-            {
-                this._lastName = value;
-            }
-        }
+        
 
-        public string Email
-        {
-            get
-            {
-                return this._email;
-            }
-            set
-            {
-                this._email = value;
-            }
-        }
-
-        public string Password
-        {
-            get { return this._password; }
-            set { this._password = value; }
-        }
-
-        public string ConfirmPassword
-        {
-            get
-            {
-                return this._confirmPassword;
-            }
-            set
-            {
-                this._confirmPassword = value;
-            }
-        }
-
-        public string Courses
-        {
-            get
-            {
-                return this._course;
-            }
-            set
-            {
-                this._course = value;
-            }
-        }
-
-        public string SchoolProgram
-        {
-            get
-            {
-                return this._schoolProgram;
-            }
-
-            set
-            {
-                this._schoolProgram = value;
-            }
-        }
-
-        public string Year
-        {
-            get
-            {
-                return this._year;
-            }
-
-            set
-            {
-                this._year = value;
-            }
-        }
-
-        public int Gender
-        {
-            get
-            {
-                return this._gender;
-            }
-
-            set
-            {
-                this._gender = value;
-            }
-        }
-
-        public string MobileNumber
-        {
-            get
-            {
-                return this._mobileNumber;
-            }
-            set
-            {
-                this._mobileNumber = value;
-            }
-        }
-
-        public string City
-        {
-            get
-            {
-                return this._city;
-            }
-            set
-            {
-                this._city = value;
-            }
-        }
-
-        public String BirthDate
-        {
-            get
-            {
-                return this._birthDate;
-            }
-            set
-            {
-                this._birthDate = value;
-            }
-        }
     }

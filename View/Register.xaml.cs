@@ -10,7 +10,8 @@ public partial class Register : ContentPage
     private ObservableCollection<String> _schoolProgram;
     private ObservableCollection<String> _course;
     private ObservableCollection<String> _yrLvl;
-
+    RegisterViewModel studentViewModel = new RegisterViewModel();
+    private ObservableCollection<Student> _students;
     public ObservableCollection<String> SchoolProgram
     {
         get { return _schoolProgram; }
@@ -27,6 +28,12 @@ public partial class Register : ContentPage
     {
         get { return _yrLvl; }
         set { _yrLvl = value; }
+    }
+
+    public ObservableCollection<Student> Students
+    {
+        get { return _students; }
+        set { _students = value; }
     }
 
 
@@ -74,10 +81,10 @@ public partial class Register : ContentPage
     
 
 
-    private Student theUser()
+    /*private Student theUser()
     {
 
-        Student theStudent = new Student();
+        /*Student theStudent = new Student();
         theStudent.StudentID = entryStudentID.Text;
         theStudent.FirstName = entryFirstName.Text;
         theStudent.LastName = entryLastName.Text;
@@ -93,19 +100,21 @@ public partial class Register : ContentPage
         theStudent.Year = yrLvlPicker.SelectedItem.ToString();
         return theStudent;
     }
+    */
+        
     
         
     
 
 
 
-    public int radioGenderIsCheck()
+    public string radioGenderIsCheck()
     {
-        if (radioMale.IsChecked || radioFemale.IsChecked == true)
+        if (radioMale.IsChecked = true)
         {
-            return 1;
+            return "Male";
         }
-        else { return 0; }
+        else { return "Female"; }
     }
 
     public bool ValidateForm()
@@ -117,7 +126,7 @@ public partial class Register : ContentPage
         && !IsNullOrEmpty(yrLvlPicker.SelectedItem.ToString());
 
         if (entryStudentID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
-            && entryPassword.Text != null && entryConfirmPassword.Text == entryPassword.Text && radioGenderIsCheck() == 1
+            && entryPassword.Text != null && entryConfirmPassword.Text == entryPassword.Text
             && entryMobileNumber.Text != null && entryCity.Text != null && datePickerBirthDate != null)
         {
             firstEntry = true;
@@ -135,14 +144,29 @@ public partial class Register : ContentPage
 
     private void SubmitbtnIsClicked(object sender, EventArgs e)
     {
-        var popup = new PopupPage(theUser());
-
         bool IsValidated = ValidateForm();
         if (IsValidated==true)
         {
             txtSysMessage.Text = "Success";
             txtSysMessage.TextColor = Colors.Green;
-            this.ShowPopup(popup);
+
+            Student student = new Student(entryStudentID.Text,
+            entryFirstName.Text,
+            entryLastName.Text,
+            entryEmail.Text,
+            entryPassword.Text,
+            entryConfirmPassword.Text,
+            picker.SelectedItem.ToString(),
+            coursePicker.SelectedItem.ToString(),
+            yrLvlPicker.SelectedItem.ToString(),
+            radioGenderIsCheck(),
+            entryMobileNumber.Text,
+            entryCity.Text,
+            datePickerBirthDate.Date.ToString("dd/MM/yyyy"));
+
+            //Students.Add(student);
+            studentViewModel.AddStudent(student);
+            //this.ShowPopup(popup);
         }
         else
         {

@@ -12,21 +12,10 @@ public partial class PopupPage : Popup
     {
         InitializeComponent();
         this.theStudent = theStudent;
-        BindingContext = theStudent;
-        Gender();
+
     }
 
-    public void Gender()
-    {
-        if(theStudent.Gender == 1)
-        {
-            lblGender.Text = "Male";
-        }
-        else
-        {
-            lblGender.Text = "Female";
-        }
-    }
+   
 
 
 
