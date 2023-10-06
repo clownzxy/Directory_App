@@ -23,7 +23,7 @@
                     Margin="5"
                     MaxLength="32"
                     MinimumWidthRequest="500"
-                    Placeholder="Username"
+                    Placeholder="Student ID"
                     TextColor="Black"
                     VerticalOptions="Center" />
             </Border>

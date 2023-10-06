@@ -70,7 +70,6 @@ public class RegisterViewModel
     public void FileCreate(ObservableCollection<Student>productCollection)
     {
         string filePath = Path.Combine(maindir, "Users.json");
-        productCollection.Add(null);
 
         var jsonData = JsonSerializer.Serialize(productCollection);
 

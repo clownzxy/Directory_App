@@ -1,20 +1,31 @@
-﻿using DirectoryApp.ViewModel;
+﻿using DirectoryApp.Model;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Collections.ObjectModel;
 
 namespace DirectoryApp
 {
     public partial class MainPage : ContentPage
     {
-        string user = "admin";
-        string pass = "123";
+        string maindir = FileSystem.Current.AppDataDirectory;
 
-       MainPageViewModel viewModel = new MainPageViewModel();
+        private ObservableCollection<Student> _students;
+
+        public ObservableCollection<Student> Students
+        {
+            get
+            {
+                return _students;
+            }
+            set
+            {
+                _students = value;
+            }
+        }
 
         public MainPage()
         {
             InitializeComponent();
-            //viewModel.FileCreate();
 
         }
 
@@ -23,23 +34,59 @@ namespace DirectoryApp
             Navigation.PushAsync(new Register());
         }
 
-
-
-        private void Login_Clicked(object sender, EventArgs e)
+        public bool ValidateForm()
         {
-            if (user.ToLower().CompareTo(inputUsername.Text) == 0 && pass.ToLower().CompareTo(inputPassword.Text) == 0)
+
+            bool firstEntry = true;
+            var filePath = Path.Combine(maindir, "Users.json");
+      //StudentData = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);*/
+
+     
+
+      string jsonData = File.ReadAllText(filePath);
+            Students = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);
+
+            foreach ( Student student in Students)
             {
-                sysMessage.Text = "Login Success";
+                if (student.StudentID == inputUsername.Text&&student.Password==inputPassword.Text)
+                {
+                    firstEntry = true;
+                    break;
+                }
+                else
+                {
+                    firstEntry= false;
+                }
+
             }
-            else if (String.IsNullOrEmpty(inputUsername.Text))
+
+            if(firstEntry)
             {
-                sysMessage.Text = "“Username and/or Password should not be empty. Please try again.”";
+                return true;
             }
             else
             {
-                sysMessage.Text = "Username and/or Password is incorrect. Please try again";
+                return false;
             }
 
+        }
+
+        private void Login_Clicked(object sender, EventArgs e)
+        {
+
+            bool IsValidated = ValidateForm();
+            if (IsValidated == true)
+            {
+                DisplayAlert("Login Alert", "Login successfull","Close");
+                Navigation.PushAsync(new Home());
+
+            }
+            else
+            {
+
+                DisplayAlert("Login Alert", "Login unsuccessfull", "Close");
+                Navigation.PushAsync(new Register());
+            }
 
         }
     }

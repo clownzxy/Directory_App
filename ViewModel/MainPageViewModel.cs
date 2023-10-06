@@ -1,11 +1,13 @@
 using System.Collections.ObjectModel;
 using System.Text.Json;
+using DirectoryApp.Model;
 
-namespace DirectoryApp.ViewModel;
+namespace DirectoryApp;
 
 public class MainPageViewModel : ContentPage
 {
     string maindir = FileSystem.Current.AppDataDirectory;
+    
 
     public void FileCreate()
     {
@@ -15,5 +17,7 @@ public class MainPageViewModel : ContentPage
             File.Create(filePath);
         }
     }
+
+    
 
 }

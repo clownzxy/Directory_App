@@ -130,8 +130,8 @@ public partial class Register : ContentPage
     public bool ValidateForm()
     {
 
-        bool firstEntry = false;
-        bool secondEntry = false;
+        bool firstEntry = true;
+        bool secondEntry = true;
         var filePath = Path.Combine(maindir, "Users.json");
         //StudentData = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);*/
 
@@ -144,12 +144,12 @@ public partial class Register : ContentPage
             {
                 firstEntry = false;
             }
-            else
+            else if(student.StudentID!=entryStudentID.Text)
             {
-                secondEntry = true;
+                firstEntry = true;
             }
         }
-
+        
         /*if (entryStudentID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
             && entryPassword.Text != null && entryConfirmPassword.Text == entryPassword.Text
             && entryMobileNumber.Text != null && entryCity.Text != null && datePickerBirthDate != null)
