@@ -81,9 +81,11 @@ public partial class Register : ContentPage
         picker.ItemsSource = SchoolProgram;
         coursePicker.ItemsSource = Course;
         yrLvlPicker.ItemsSource = YrLvl;
+
         picker.SelectedItem = "-SELECT-";
         coursePicker.SelectedItem = "-SELECT-";
         yrLvlPicker.SelectedItem = "-SELECT-";
+
         picker.SelectedIndexChanged += Picker_SelectedIndexChanged;
         BindingContext = studentViewModel;
     }

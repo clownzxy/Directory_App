@@ -1,7 +1,9 @@
 ﻿using DirectoryApp.Model;
+using DirectoryApp.View;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using System.Collections.ObjectModel;
+using DirectoryApp.ViewModel;
 
 namespace DirectoryApp
 {
@@ -29,9 +31,9 @@ namespace DirectoryApp
 
         }
 
-        private void RegisterPage(object sender, EventArgs e)
+        private async void RegisterPage(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Register());
+            await Shell.Current.GoToAsync(nameof(Register));
         }
 
         public bool ValidateForm()
@@ -71,21 +73,22 @@ namespace DirectoryApp
 
         }
 
-        private void Login_Clicked(object sender, EventArgs e)
+        private async void Login_Clicked(object sender, EventArgs e)
         {
-
+            HomeViewModel HomeViewModelPage = new HomeViewModel();
             bool IsValidated = ValidateForm();
             if (IsValidated == true)
             {
-                DisplayAlert("Login Alert", "Login successfull","Close");
-                Navigation.PushAsync(new Home());
+                //await DisplayAlert("Login Alert", "Login successfull","Close");
+                //HomeViewModelPage.ConvertToProductCollection(inputUsername.Text);
+
+                 await Shell.Current.GoToAsync($"{nameof(Home)}?id={inputUsername.Text}");
 
             }
             else
             {
 
-                DisplayAlert("Login Alert", "Login unsuccessfull", "Close");
-                Navigation.PushAsync(new Register());
+                await DisplayAlert("Login Alert", "Login unsuccessfull, please register.", "Close");
             }
 
         }

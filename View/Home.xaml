@@ -2,11 +2,61 @@
 <ContentPage
     x:Class="DirectoryApp.View.Home"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:DirectoryApp.Model"
+    xmlns:vm="clr-namespace=DirectoryApp.ViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Grid">
+                <Setter Property="Margin" Value="20" />
+                <Setter Property="ColumnSpacing" Value="20" />
+                <Setter Property="WidthRequest" Value="1000" />
+            </Style>
+
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ScrollView Margin="0,20">
+        <StackLayout Spacing="10">
+            <Button
+                Margin="0,0,20,0"
+                Background="#0090ff"
+                Clicked="clickedAddContactForms"
+                CornerRadius="12"
+                FontAttributes="Bold"
+                FontSize="13"
+                HorizontalOptions="End"
+                Text="+" />
+
+            <Grid ColumnDefinitions="100,*,*,*,*,*,*,*">
+                <Label Grid.Column="0" Text="ID" />
+                <Label Grid.Column="1" Text="Last Name" />
+                <Label Grid.Column="2" Text="First Name" />
+                <Label Grid.Column="3" Text="School Program" />
+                <Label Grid.Column="4" Text="Course" />
+                <Label Grid.Column="5" Text="Email" />
+                <Label Grid.Column="6" Text="Mobile Number" />
+                <Label Grid.Column="7" Text="Type" />
+            </Grid>
+
+            <CollectionView ItemsSource="{Binding ContactCollection}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="model:ContactsModel">
+                        <Grid
+                            Margin="0,0,0,20"
+                            ColumnDefinitions="100,*,*,*,*,*,*,*"
+                            WidthRequest="1000">
+                            <Label Grid.Column="0" Text="{Binding ID}" />
+                            <Label Grid.Column="1" Text="{Binding LastName}" />
+                            <Label Grid.Column="2" Text="{Binding FirstName}" />
+                            <Label Grid.Column="3" Text="{Binding School}" />
+                            <Label Grid.Column="4" Text="{Binding Course}" />
+                            <Label Grid.Column="5" Text="{Binding Email}" />
+                            <Label Grid.Column="6" Text="{Binding MobileNo}" />
+                            <Label Grid.Column="7" Text="{Binding Type}" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ScrollView>
 </ContentPage>

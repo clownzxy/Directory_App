@@ -10,10 +10,17 @@ public class RegisterViewModel
 {
     private ObservableCollection<Student> productCollection = new ObservableCollection<Student>();
     string maindir = FileSystem.Current.AppDataDirectory;
+    public ObservableCollection<Model.ContactsModel> contactCollection = new ObservableCollection<Model.ContactsModel>();
     public ObservableCollection<Student> ProductCollection
     {
         get { return productCollection; }
         set { productCollection = value; }
+    }
+
+    public ObservableCollection<Model.ContactsModel> ContactCollection
+    {
+        get { return contactCollection; }
+        set { contactCollection = value; }
     }
 
     public RegisterViewModel() {
@@ -60,9 +67,10 @@ public class RegisterViewModel
     public void StudentFileCreate(Student student)
     {
             string filePath = Path.Combine(maindir, ($"S[{student.StudentID}].json"));
+            var jsonData = JsonSerializer.Serialize(productCollection);
             if (!File.Exists(filePath))
             {
-                File.Create(filePath);
+                File.WriteAllText(filePath, jsonData);
             }
         
     }
