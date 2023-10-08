@@ -19,6 +19,7 @@ public partial class AddContactForm : ContentPage
     //Home home = new Home();
     private ObservableCollection<String> _schoolProgram;
     private ObservableCollection<String> _course;
+    private ObservableCollection<String> _studentID;  
     string maindir = FileSystem.Current.AppDataDirectory;
 
     public ObservableCollection<String> SchoolProgram
@@ -45,10 +46,16 @@ public partial class AddContactForm : ContentPage
         }
     }
 
+    public ObservableCollection<String> StudentID
+    {
+        get { return _studentID; }
+        set { _studentID = value; }
+    }
+
     public AddContactForm()
     {
         InitializeComponent();
-
+        //AddContactFormViewModel AddContactFormViewModelPage = new AddContactFormViewModel(contacts,StudentId);
         ObservableCollection<String> SchoolProgram = new ObservableCollection<String>() {
       "-SELECT-",
       "SOE",
@@ -71,8 +78,17 @@ public partial class AddContactForm : ContentPage
         pckCourse.SelectedItem = "-SELECT-";
 
         pckSchool.SelectedIndexChanged += Picker_SelectedIndexChanged;
+        ObservableCollection<String> studentIDpls = new ObservableCollection<String>()
+        {
+            StudentId
+        };
+        //BindingContext = AddContactFormViewModelPage;
+        BindingContext = this;
+    }
 
-        BindingContext = AddContactFormViewModelPage;
+    public string GetStudentId(string Studentid)
+    {
+        return Studentid=StudentID.ToString();
     }
 
     private void Picker_SelectedIndexChanged(object sender, EventArgs e)
@@ -223,6 +239,9 @@ public partial class AddContactForm : ContentPage
             pckSchool.SelectedItem.ToString(),
             pckCourse.SelectedItem.ToString());
                 AddContactFormViewModelPage.AddStudent(contacts, StudentId);
+                //AddContactFormViewModel AddContactFormViewModelPage = new AddContactFormViewModel(contacts, StudentId);
+
+
             }
             else
             {
@@ -235,14 +254,17 @@ public partial class AddContactForm : ContentPage
                             pckSchool.SelectedItem.ToString(),
                             pckCourse.SelectedItem.ToString());
                 AddContactFormViewModelPage.AddStudent(contacts, StudentId);
+                //AddContactFormViewModel AddContactFormViewModelPage = new AddContactFormViewModel(contacts, StudentId);
+
             }
 
 
             //Students.Add(student);
 
             //this.ShowPopup(popup);
-            //await Shell.Current.GoToAsync($"{nameof(Home)}?id={StudentId}");
-            await Shell.Current.GoToAsync($"{nameof(Home)}");
+            await Shell.Current.GoToAsync($"{nameof(Home)}?id={StudentId}");
+            //await Shell.Current.GoToAsync($"{nameof(Home)}");
+            //await Navigation.PushAsync(new Home(StudentId));
 
 
         }

@@ -11,12 +11,13 @@ public class HomeViewModel : ContentPage,INotifyPropertyChanged
 {
     string maindir = FileSystem.Current.AppDataDirectory;
     public ObservableCollection<ContactsModel> contactCollection = new ObservableCollection<ContactsModel>();
-    private string _studentID;
-    public string StudentId
+    private String _studentID;
+    public String StudentId
     {
         get { return _studentID; }
         set { _studentID = value;
             OnPropertyChanged();
+            ConvertToProductCollection(StudentId);
         }
     }
     public ObservableCollection<ContactsModel> ContactCollection
@@ -28,14 +29,13 @@ public class HomeViewModel : ContentPage,INotifyPropertyChanged
 
     public HomeViewModel()
     {
-        ConvertToProductCollection(StudentId);
+        //ConvertToProductCollection(studid);
     }
 
 
 
-    public void ConvertToProductCollection(string StudentId)
+    public void ConvertToProductCollection(String StudentId)
     {
-        //DisplayAlert(Title, atay,"atay");
         string filePath = Path.Combine(maindir, $"S[{StudentId}].json");
 
         if (File.Exists(filePath))

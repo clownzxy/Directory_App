@@ -15,6 +15,7 @@ public partial class Home : ContentPage , INotifyPropertyChanged
     get {  return _studentId; }
     set { _studentId = value;
             OnPropertyChanged();
+            ReadFile();
         }
 }
 
@@ -23,11 +24,7 @@ public partial class Home : ContentPage , INotifyPropertyChanged
 	{
 		InitializeComponent();
         //DisplayAlert("Home", StudentId,"atay");
-        if(StudentId != null)
-        {
-            ReadFile();
 
-        }
         BindingContext = HomeViewModelPage;
     }
 

@@ -17,12 +17,14 @@ public class AddContactFormViewModel : ContentPage
 
     public AddContactFormViewModel()
 	{
-
+        //ConvertToProductCollection(StudentId);
+        //AddStudent(contacts, StudentId);
     }
 
     public void AddStudent(ContactsModel contacts,string StudentId)
     {
         ConvertToProductCollection(StudentId);
+
         contactCollection.Add(contacts);
         SaveToFile(contacts,StudentId);
     }

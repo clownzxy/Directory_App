@@ -75,14 +75,13 @@ namespace DirectoryApp
 
         private async void Login_Clicked(object sender, EventArgs e)
         {
-            HomeViewModel HomeViewModelPage = new HomeViewModel();
+            //HomeViewModel HomeViewModelPage = new HomeViewModel();
             bool IsValidated = ValidateForm();
             if (IsValidated == true)
             {
-                //await DisplayAlert("Login Alert", "Login successfull","Close");
-                //HomeViewModelPage.ConvertToProductCollection(inputUsername.Text);
-
-                 await Shell.Current.GoToAsync($"{nameof(Home)}?id={inputUsername.Text}");
+                await DisplayAlert("Login Alert", "Login successfull","Close");
+                await Shell.Current.GoToAsync($"{nameof(Home)}?id={inputUsername.Text}");
+                //await Navigation.PushAsync(new Home(inputUsername.Text));
 
             }
             else
