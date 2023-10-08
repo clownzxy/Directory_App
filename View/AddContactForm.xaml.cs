@@ -161,65 +161,11 @@ public partial class AddContactForm : ContentPage
         {
             Course.Add("BS-Law");
         }
+
+        BindingContext = AddContactFormViewModelPage;
     }
 
-    public string radioTypeIsChecked()
-    {
-        if (rdoFaculty.IsChecked == true)
-        {
-            return "Faculty";
-        }
-        else { return "Student"; }
-    }
-
-    public bool ValidateForm()
-    {
-
-        bool firstEntry = true;
-        bool secondEntry = true;
-        var filePath = Path.Combine(maindir, "Users.json");
-        //StudentData = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);*/
-
-
-        if (entryID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
-            && entryMobileNo.Text != null)
-        {
-            firstEntry = true;
-        }
-        else
-        {
-            firstEntry = false;
-        }
-
-        if (rdoFaculty.IsChecked == true)
-        {
-            secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString());
-
-            if (firstEntry && secondEntry == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        else
-        {
-            secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString()) && !IsNullOrEmpty(pckCourse.SelectedItem.ToString());
-
-            if (firstEntry && secondEntry == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-        
-    }
-
+    
     private async void btnSubmitIsClicked(object sender, EventArgs e)
     {
         bool IsValidated = ValidateForm();
@@ -273,6 +219,70 @@ public partial class AddContactForm : ContentPage
             await DisplayAlert("Contact Form", "Operation Unsuccessful", "Close");
 
         }
+    }
+
+    public string radioTypeIsChecked()
+    {
+        if (rdoFaculty.IsChecked == true)
+        {
+            return "Faculty";
+        }
+        else { return "Student"; }
+    }
+
+    public bool ValidateForm()
+    {
+
+        bool firstEntry = true;
+        bool secondEntry = true;
+        var filePath = Path.Combine(maindir, "Users.json");
+        //StudentData = JsonSerializer.Deserialize<ObservableCollection<Student>>(jsonData);*/
+
+
+        if (entryID.Text != null && entryFirstName.Text != null && entryLastName.Text != null && entryEmail.Text != null
+            && entryMobileNo.Text != null)
+        {
+            firstEntry = true;
+        }
+        else
+        {
+            firstEntry = false;
+        }
+
+        if (rdoFaculty.IsChecked == true)
+        {
+            bool IsIDCorrect = true;
+
+            if (entryID. == 4)
+            {
+                IsIDCorrect = true;
+            }
+
+                secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString()) && IsIDCorrect;
+
+            if (firstEntry && secondEntry == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        else
+        {
+            secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString()) && !IsNullOrEmpty(pckCourse.SelectedItem.ToString());
+
+            if (firstEntry && secondEntry == true)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
     }
 
 }

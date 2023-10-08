@@ -62,22 +62,22 @@
             Content="Student" />
 
         <Entry
-            x:Name="entryID"
+            x:Name="entryID" ToolTipProperties.Text="Requred. Numeric values only"
             Grid.Row="1"
             Grid.Column="1"
             HeightRequest="50" />
         <Entry
-            x:Name="entryFirstName"
+            x:Name="entryFirstName" ToolTipProperties.Text="Required"
             Grid.Row="2"
             Grid.Column="1"
             HeightRequest="50" />
         <Entry
-            x:Name="entryLastName"
+            x:Name="entryLastName" ToolTipProperties.Text="Required"
             Grid.Row="3"
             Grid.Column="1"
             HeightRequest="50" />
         <Entry
-            x:Name="entryEmail"
+            x:Name="entryEmail" ToolTipProperties.Text="Required"
             Grid.Row="4"
             Grid.Column="1"
             HeightRequest="50" />
@@ -88,7 +88,7 @@
             Spacing="40">
             <Label Margin="0,20,0,0" Text="Mobile No." />
             <Entry
-                x:Name="entryMobileNo"
+                x:Name="entryMobileNo" ToolTipProperties.Text="Number input only"
                 HeightRequest="50"
                 WidthRequest="200" />
         </HorizontalStackLayout>

@@ -43,6 +43,5 @@ public partial class Home : ContentPage , INotifyPropertyChanged
         await Shell.Current.GoToAsync($"{nameof(AddContactForm)}?id={StudentId}");
     }
 
-
-
+    
 }

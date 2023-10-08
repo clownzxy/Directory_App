@@ -67,6 +67,7 @@ public class RegisterViewModel
     public void StudentFileCreate(Student student)
     {
             string filePath = Path.Combine(maindir, ($"S[{student.StudentID}].json"));
+        productCollection.Clear();
             var jsonData = JsonSerializer.Serialize(productCollection);
             if (!File.Exists(filePath))
             {
