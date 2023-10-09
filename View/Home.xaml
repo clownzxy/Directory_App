@@ -4,7 +4,8 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:model="clr-namespace:DirectoryApp.Model"
-    xmlns:vm="clr-namespace=DirectoryApp.ViewModel">
+    xmlns:vm="clr-namespace:DirectoryApp.ViewModel"
+    x:DataType="vm:HomeViewModel">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Grid">

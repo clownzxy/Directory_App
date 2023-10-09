@@ -62,25 +62,30 @@
             Content="Student" />
 
         <Entry
-            x:Name="entryID" ToolTipProperties.Text="Requred. Numeric values only"
+            x:Name="entryID"
             Grid.Row="1"
             Grid.Column="1"
-            HeightRequest="50" />
+            HeightRequest="50"
+            MaxLength="4"
+            ToolTipProperties.Text="Requred. Numeric values only" />
         <Entry
-            x:Name="entryFirstName" ToolTipProperties.Text="Required"
+            x:Name="entryFirstName"
             Grid.Row="2"
             Grid.Column="1"
-            HeightRequest="50" />
+            HeightRequest="50"
+            ToolTipProperties.Text="Required" />
         <Entry
-            x:Name="entryLastName" ToolTipProperties.Text="Required"
+            x:Name="entryLastName"
             Grid.Row="3"
             Grid.Column="1"
-            HeightRequest="50" />
+            HeightRequest="50"
+            ToolTipProperties.Text="Required" />
         <Entry
-            x:Name="entryEmail" ToolTipProperties.Text="Required"
+            x:Name="entryEmail"
             Grid.Row="4"
             Grid.Column="1"
-            HeightRequest="50" />
+            HeightRequest="50"
+            ToolTipProperties.Text="Required" />
 
         <HorizontalStackLayout
             Grid.Row="1"
@@ -88,8 +93,9 @@
             Spacing="40">
             <Label Margin="0,20,0,0" Text="Mobile No." />
             <Entry
-                x:Name="entryMobileNo" ToolTipProperties.Text="Number input only"
+                x:Name="entryMobileNo"
                 HeightRequest="50"
+                ToolTipProperties.Text="Number input only"
                 WidthRequest="200" />
         </HorizontalStackLayout>
 
@@ -132,6 +138,7 @@
             Grid.Row="5"
             Grid.Column="2"
             Margin="0,0,0,300"
+            ClassId="ResetForm"
             HeightRequest="50"
             Text="Reset" />
 

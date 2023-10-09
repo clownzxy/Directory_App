@@ -1,4 +1,5 @@
 using DirectoryApp.ViewModel;
+using DirectoryApp.Model;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
@@ -23,7 +24,6 @@ public partial class Home : ContentPage , INotifyPropertyChanged
     public Home()
 	{
 		InitializeComponent();
-        //DisplayAlert("Home", StudentId,"atay");
 
         BindingContext = HomeViewModelPage;
     }

@@ -165,7 +165,18 @@ public partial class AddContactForm : ContentPage
         BindingContext = AddContactFormViewModelPage;
     }
 
-    
+
+    public async void ResetForm()
+    {
+        // Get current page
+        var page = Navigation.NavigationStack.LastOrDefault();
+
+        // Load new page
+        await Navigation.PushAsync(new AddContactForm());
+
+        // Remove old page
+        Navigation.RemovePage(page);
+    }
     private async void btnSubmitIsClicked(object sender, EventArgs e)
     {
         bool IsValidated = ValidateForm();
@@ -251,14 +262,9 @@ public partial class AddContactForm : ContentPage
 
         if (rdoFaculty.IsChecked == true)
         {
-            bool IsIDCorrect = true;
+            
 
-            if (entryID. == 4)
-            {
-                IsIDCorrect = true;
-            }
-
-                secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString()) && IsIDCorrect;
+                secondEntry = !IsNullOrEmpty(pckSchool.SelectedItem.ToString());
 
             if (firstEntry && secondEntry == true)
             {
